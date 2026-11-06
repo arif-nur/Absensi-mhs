@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111827">
+<meta name="description" content="Aplikasi absensi mahasiswa">
+<title>Absensi Mahasiswa</title>
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f3f4f6;color:#111827}
+header{background:#111827;color:white;padding:14px 16px;text-align:center}
+header h1{font-size:20px;margin:4px}header p{font-size:13px;margin:6px 0}
+main{max-width:900px;margin:auto;padding:12px}
+.notice{background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:12px;margin-bottom:12px;font-size:13px}
+a.open{display:block;background:#2563eb;color:white;text-align:center;padding:14px;border-radius:10px;text-decoration:none;font-weight:bold}
+iframe{width:100%;height:78vh;border:0;border-radius:10px;background:white}
+footer{text-align:center;color:#6b7280;font-size:12px;padding:12px}
+</style>
+</head>
+<body>
+<header><h1>Absensi Mahasiswa</h1><p>Portal kehadiran mahasiswa</p></header>
+<main>
+<div class="notice">Jika aplikasi tidak tampil di bawah, tekan tombol <b>Buka Aplikasi Absensi</b>. Koneksi internet diperlukan untuk mengirim absensi.</div>
+<a class="open" id="openApp" href="https://GANTI-LINK-GRADIO.gradio.live" target="_blank" rel="noopener">Buka Aplikasi Absensi</a>
+<p></p>
+<iframe id="appFrame" title="Aplikasi Absensi" src="https://GANTI-LINK-GRADIO.gradio.live"></iframe>
+</main>
+<footer>Absensi Mahasiswa · PWA</footer>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("./service-worker.js").catch(console.error));
+}
+</script>
+</body>
+</html>

@@ -13,4 +13,4 @@ jobs:
       - name: Push to HF
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push --force https://arief-nurrohman:$HF_TOKEN@huggingface.co/spaces/arief-nur/arief-nurrohman main
+        run: git push --force https://arief-nurrohman:$HF_TOKEN@huggingface.co/spaces/arief-nur/absensi-mhs maing
